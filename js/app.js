@@ -10,6 +10,7 @@ function textFlid(textid) {
     const textBalance = document.getElementById(textid);
     return textBalance;
 }
+// calculate income and expenses
 document.getElementById('calculate').addEventListener('click',function(){
    const income = inputFlid('income');
    const food = inputFlid('food');
@@ -23,4 +24,12 @@ document.getElementById('calculate').addEventListener('click',function(){
 
   textFlid('total-expensen').innerText= expenses;
   textFlid('total-balance').innerText= result;
+})
+//save money
+document.getElementById('save-btn').addEventListener('click',function(){
+   const save = inputFlid('save');
+    const totalBalance= textFlid('total-balance').innerText;
+
+   console.log(totalBalance);
+
 })

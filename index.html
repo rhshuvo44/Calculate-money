@@ -31,58 +31,79 @@
           </div>
           <div class="col-md-5">
             <div class="calculate-area text-center px-auto py-5">
-              <h3>Income</h3>
-              <div class="row mb-3">
-                <label for="income" class="col-md-2 col-form-label"
-                  >Income:</label
-                >
-                <div class="col-md-6">
-                  <input type="text" class="form-control" id="income" />
+              <div class="d-flex justify-content-center">
+                <div>
+                  <h3>Income</h3>
+                  <div class="row mb-3">
+                    <label for="income" class="col-md-3 col-form-label"
+                      >Income:</label
+                    >
+                    <div class="col-md-6">
+                      <input type="text" class="form-control" id="income" />
+                    </div>
+                  </div>
                 </div>
               </div>
-              <h3>Expenses</h3>
-              <div class="row mb-3">
-                <label for="food" class="col-md-2 col-form-label">Food</label>
-                <div class="col-md-6">
-                  <input type="text" class="form-control" id="food" />
+              <div class="d-flex justify-content-center">
+                <div>
+                  <h3>Expenses</h3>
+                  <div class="row mb-3">
+                    <label for="food" class="col-md-3 col-form-label"
+                      >Food</label
+                    >
+                    <div class="col-md-6">
+                      <input type="text" class="form-control" id="food" />
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <label for="rent" class="col-md-3 col-form-label"
+                      >Rent</label
+                    >
+                    <div class="col-md-6">
+                      <input type="text" class="form-control" id="rent" />
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <label for="clothes" class="col-md-3 col-form-label"
+                      >Clothes</label
+                    >
+                    <div class="col-md-6">
+                      <input type="text" class="form-control" id="clothes" />
+                    </div>
+                  </div>
+                  <button id="calculate" class="btn btn-primary">
+                    Calculate
+                  </button>
+                  <div class="py-5">
+                    <h3>Total Expenses: <span id="total-expensen">00</span></h3>
+                    <h3>Balance: <span id="total-balance">00</span></h3>
+                  </div>
                 </div>
               </div>
-              <div class="row mb-3">
-                <label for="rent" class="col-md-2 col-form-label">Rent</label>
-                <div class="col-md-6">
-                  <input type="text" class="form-control" id="rent" />
+              <!-- saving  -->
+              <div class="d-flex justify-content-center">
+                <div>
+                  <div class="row mb-3">
+                    <label for="save" class="col-md-2 col-form-label"
+                      >Save</label
+                    >
+                    <div class="col-md-2">
+                      <input type="text" class="form-control" id="save" />
+                    </div>
+                    <div class="col-md-4">
+                        <span>%</span>
+                      <button id="save-btn" class="btn btn-primary">
+                        Save
+                      </button>
+                    </div>
+                  </div>
+                  <div class="py-5">
+                    <h3>Saving Amount: <span id="saving-amount">00</span></h3>
+                    <h3>
+                      Remaining Balance: <span id="remaining-amount">00</span>
+                    </h3>
+                  </div>
                 </div>
-              </div>
-              <div class="row mb-3">
-                <label for="clothes" class="col-md-2 col-form-label"
-                  >Clothes</label
-                >
-                <div class="col-md-6">
-                  <input type="text" class="form-control" id="clothes" />
-                </div>
-              </div>
-              <button id="calculate" class="btn btn-primary">Calculate</button>
-              <div class="py-5">
-                <h3>Total Expenses: <span id="total-expensen">00</span></h3>
-                <h3>Balance: <span id="total-balance">00</span></h3>
-              </div>
-
-              <div class="row mb-3">
-                <label for="save-input" class="col-md-2 col-form-label"
-                  >Save</label
-                >
-                <div class="col-md-4">
-                  <input type="text" class="form-control" id="save-input" />
-                </div>
-                <div class="col-md-4">
-                  <span>%</span> <button class="btn btn-primary">Save</button>
-                </div>
-              </div>
-              <div class="py-5">
-                <h3>Saving Amount: <span id="saving-amount">00</span></h3>
-                <h3>
-                  Remaining Balance: <span id="remaining-amount">00</span>
-                </h3>
               </div>
             </div>
           </div>
