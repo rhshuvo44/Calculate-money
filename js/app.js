@@ -28,8 +28,14 @@ document.getElementById('calculate').addEventListener('click',function(){
 //save money
 document.getElementById('save-btn').addEventListener('click',function(){
    const save = inputFlid('save');
-    const totalBalance= textFlid('total-balance').innerText;
+   const income = inputFlid('income');
+    const balance= textFlid('total-balance').innerText;
 
-   console.log(totalBalance);
+   const saving = income *(save/100);
+   const remainingAmount =balance-saving;
+   textFlid('saving-amount').innerText=saving;
+   textFlid('remaining-amount').innerText=remainingAmount;
+
+   
 
 })
