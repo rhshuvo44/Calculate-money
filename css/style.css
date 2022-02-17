@@ -20,6 +20,7 @@ h3 {
   line-height: 26px;
   color: #000000;
 }
+/* img  */
 .img-area {
   height: 815px;
 }
@@ -27,10 +28,12 @@ h3 {
   height: 100%;
   object-fit: cover;
 }
+/* .calculate-area */
 .calculate-area {
   background-color: #f8f8f8;
   height: 815px;
 }
+/* erro  */
 #erro,
 #erro1,
 #erro2 {

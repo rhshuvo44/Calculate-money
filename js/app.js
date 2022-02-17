@@ -2,10 +2,9 @@
 function getInputValue(element) {
     let inputText =document.getElementById(element).value;
     const input=parseFloat(inputText);
-    // input clean 
-    inputText.value ='';
     return input;
 }
+// text amount 
 function getTextValue(element) {
     const textBalance = document.getElementById(element);
     return textBalance;
@@ -20,13 +19,14 @@ document.getElementById('calculate').addEventListener('click',function(){
    if (isNaN(income) || isNaN(food) ||isNaN(rent) ||isNaN(clothes)) {
     getTextValue('erro').style.display='block';
     getTextValue('erro1').style.display='none';
-
+    getTextValue('erro2').style.display='block';
    }else{
     getTextValue('erro').style.display='none';
 //    total-expenses
    const expenses = food+rent+clothes;
    //    total balance 
       const result = income - expenses;
+    //   erro 
     if (income < expenses) {
     getTextValue('erro1').style.display='block';
         
@@ -46,7 +46,7 @@ document.getElementById('save-btn').addEventListener('click',function(){
         
    const saving = income *(save/100);
    const remainingAmount =balance-saving;
-    
+    // erro 
     if (saving > balance) {
     getTextValue('erro2').style.display='block';
 
@@ -55,7 +55,5 @@ document.getElementById('save-btn').addEventListener('click',function(){
 
    getTextValue('saving-amount').innerText=saving;
    getTextValue('remaining-amount').innerText=remainingAmount;
-
 }
-
 })
