@@ -39,7 +39,7 @@
                       >Income:</label
                     >
                     <div class="col-md-6">
-                      <input type="text" class="form-control" id="income" />
+                      <input placeholder="Income" type="text" class="form-control" id="income" />
                     </div>
                   </div>
                 </div>
@@ -52,7 +52,7 @@
                       >Food</label
                     >
                     <div class="col-md-6">
-                      <input type="text" class="form-control" id="food" />
+                      <input placeholder="Food Cost" type="text" class="form-control" id="food" />
                     </div>
                   </div>
                   <div class="row mb-3">
@@ -60,7 +60,7 @@
                       >Rent</label
                     >
                     <div class="col-md-6">
-                      <input type="text" class="form-control" id="rent" />
+                      <input placeholder="Rent Cost" type="text" class="form-control" id="rent" />
                     </div>
                   </div>
                   <div class="row mb-3">
@@ -68,33 +68,47 @@
                       >Clothes</label
                     >
                     <div class="col-md-6">
-                      <input type="text" class="form-control" id="clothes" />
+                      <input placeholder="Clothes Cost" type="text" class="form-control" id="clothes" />
                     </div>
                   </div>
                   <button id="calculate" class="btn btn-primary">
                     Calculate
                   </button>
+                  <p id="erro" class="bg-danger p-3 mt-2 text-white">Please number</p>
                   <div class="py-5">
                     <h3>Total Expenses: <span id="total-expensen">00</span></h3>
                     <h3>Balance: <span id="total-balance">00</span></h3>
+                  <p id="erro1" class="bg-danger p-3 mt-2 text-white">Your Expenses gather then your Balance</p>
+
                   </div>
                 </div>
               </div>
               <!-- saving  -->
               <div class="d-flex justify-content-center">
-                <div>
+                <div class="input-group mb-3">
+                  
+                  <label for="save" class="col-md-3 col-form-label"
+                  >Save</label
+                >
+                <div class="col-md-6">
+                  <input placeholder="" type="text" class="form-control" id="save" />
+                </div>
+                  <span class="input-group-text">%</span>
+                </div>
+                <!-- <div>
                   <div class="row mb-3">
                     <label for="save" class="col-md-2 col-form-label"
                       >Save</label
                     >
                     <div class="col-md-2">
                       <input type="text" class="form-control" id="save" />
-                    </div>
+                    </div> -->
                     <div class="col-md-4">
-                        <span>%</span>
+                
                       <button id="save-btn" class="btn btn-primary">
                         Save
                       </button>
+                      <!-- <span>%</span> -->
                     </div>
                   </div>
                   <div class="py-5">
@@ -102,6 +116,8 @@
                     <h3>
                       Remaining Balance: <span id="remaining-amount">00</span>
                     </h3>
+                  <p id="erro2" class="bg-danger p-3 mt-2 text-white">Please number</p>
+
                   </div>
                 </div>
               </div>

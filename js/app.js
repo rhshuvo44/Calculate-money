@@ -1,40 +1,53 @@
 // all input flid 
-function inputFlid(inputid) {
-    let inputText =document.getElementById(inputid).value;
+function getInputValue(element) {
+    let inputText =document.getElementById(element).value;
     const input=parseFloat(inputText);
     // input clean 
-    inputText.value = '';
+    inputText.value ='';
     return input;
 }
-function textFlid(textid) {
-    const textBalance = document.getElementById(textid);
+function getTextValue(element) {
+    const textBalance = document.getElementById(element);
     return textBalance;
 }
 // calculate income and expenses
 document.getElementById('calculate').addEventListener('click',function(){
-   const income = inputFlid('income');
-   const food = inputFlid('food');
-   const rent = inputFlid('rent');
-   const clothes = inputFlid('clothes');
+   const income = getInputValue('income');
+   const food = getInputValue('food');
+   const rent = getInputValue('rent');
+   const clothes = getInputValue('clothes');
+//    erro input
+   if (isNaN(income) || isNaN(food) ||isNaN(rent) ||isNaN(clothes)) {
+    getTextValue('erro').style.display='block';
+    getTextValue('erro1').style.display='none';
 
+   }else{
+    getTextValue('erro').style.display='none';
 //    total-expenses
    const expenses = food+rent+clothes;
-//    total balance 
-   const result = income - expenses;
+   //    total balance 
+      const result = income - expenses;
+    if (income < expenses) {
+    getTextValue('erro1').style.display='block';
+        
+    }else{
+    getTextValue('erro1').style.display='none';
 
-  textFlid('total-expensen').innerText= expenses;
-  textFlid('total-balance').innerText= result;
+      getTextValue('total-expensen').innerText= expenses;
+      getTextValue('total-balance').innerText= result;
+   }}
+
 })
 //save money
 document.getElementById('save-btn').addEventListener('click',function(){
-   const save = inputFlid('save');
-   const income = inputFlid('income');
-    const balance= textFlid('total-balance').innerText;
+   const save = getInputValue('save');
+   const income = getInputValue('income');
+    const balance= getTextValue('total-balance').innerText;
 
    const saving = income *(save/100);
    const remainingAmount =balance-saving;
-   textFlid('saving-amount').innerText=saving;
-   textFlid('remaining-amount').innerText=remainingAmount;
+   getTextValue('saving-amount').innerText=saving;
+   getTextValue('remaining-amount').innerText=remainingAmount;
 
    
 
