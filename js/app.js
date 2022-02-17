@@ -19,19 +19,29 @@ document.getElementById('calculate').addEventListener('click',function(){
    if (isNaN(income) || isNaN(food) ||isNaN(rent) ||isNaN(clothes)) {
     getTextValue('erro').style.display='block';
     getTextValue('erro1').style.display='none';
-    getTextValue('erro2').style.display='block';
-   }else{
+    getTextValue('erro2').style.display='none';
+    getTextValue('erro3').style.display='none';
+   }else if(income <0 || food<0 ||rent< 0 ||clothes < 0){
+       
     getTextValue('erro').style.display='none';
+    getTextValue('erro1').style.display='block';
+    getTextValue('erro2').style.display='none';
+    getTextValue('erro3').style.display='none';
+   }
+   else{
+    getTextValue('erro').style.display='none';
+    getTextValue('erro1').style.display='none';
+
 //    total-expenses
    const expenses = food+rent+clothes;
    //    total balance 
       const result = income - expenses;
     //   erro 
     if (income < expenses) {
-    getTextValue('erro1').style.display='block';
+    getTextValue('erro2').style.display='block';
         
     }else{
-    getTextValue('erro1').style.display='none';
+    getTextValue('erro2').style.display='none';
 
       getTextValue('total-expensen').innerText= expenses;
       getTextValue('total-balance').innerText= result;
@@ -48,10 +58,10 @@ document.getElementById('save-btn').addEventListener('click',function(){
    const remainingAmount =balance-saving;
     // erro 
     if (saving > balance) {
-    getTextValue('erro2').style.display='block';
+    getTextValue('erro3').style.display='block';
 
 }else{
-    getTextValue('erro2').style.display='none';
+    getTextValue('erro3').style.display='none';
 
    getTextValue('saving-amount').innerText=saving;
    getTextValue('remaining-amount').innerText=remainingAmount;
