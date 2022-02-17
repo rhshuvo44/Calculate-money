@@ -16,6 +16,79 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <!-- headding  -->
+    <header>
+      <h1 class="display-1 text-center py-5">Calculate Money</h1>
+    </header>
+    <main>
+      <!-- calculate  -->
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7">
+            <div class="img-area">
+              <img class="img-fluid" src="img/cal.jpg" alt="" srcset="" />
+            </div>
+          </div>
+          <div class="col-md-5">
+            <div class="calculate-area text-center px-auto py-5">
+              <h3>Income</h3>
+              <div class="row mb-3">
+                <label for="income" class="col-md-2 col-form-label"
+                  >Income</label
+                >
+                <div class="col-md-6">
+                  <input type="text" class="form-control" id="income" />
+                </div>
+              </div>
+              <h3>Expenses</h3>
+              <div class="row mb-3">
+                <label for="food" class="col-md-2 col-form-label">Food</label>
+                <div class="col-md-6">
+                  <input type="text" class="form-control" id="food" />
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label for="rent" class="col-md-2 col-form-label">Rent</label>
+                <div class="col-md-6">
+                  <input type="text" class="form-control" id="rent" />
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label for="clothes" class="col-md-2 col-form-label"
+                  >Clothes</label
+                >
+                <div class="col-md-6">
+                  <input type="text" class="form-control" id="clothes" />
+                </div>
+              </div>
+              <button class="btn btn-primary">Calculate</button>
+              <div class="py-5">
+                <h3>Total Expenses: <span id="total-expensen">5500</span></h3>
+                <h3>Balance: <span id="balance">4500</span></h3>
+              </div>
+
+              <div class="row mb-3">
+                <label for="save-input" class="col-md-2 col-form-label"
+                  >Save</label
+                >
+                <div class="col-md-4">
+                  <input type="text" class="form-control" id="save-input" />
+                </div>
+                <div class="col-md-4">
+                  <span>%</span> <button class="btn btn-primary">Save</button>
+                </div>
+              </div>
+              <div class="py-5">
+                <h3>Saving Amount: <span id="saving-amount">2000</span></h3>
+                <h3>
+                  Remaining Balance: <span id="remaining-amount">2500</span>
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
     <!-- bootstrap js  -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

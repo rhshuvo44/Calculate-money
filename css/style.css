@@ -1,0 +1,33 @@
+/* google font  */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+/* common css  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+h1 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 59px;
+
+  color: #31a5ac;
+}
+h3 {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26px;
+  color: #000000;
+}
+.img-area {
+  height: 815px;
+}
+.img-area img {
+  height: 100%;
+  object-fit: cover;
+}
+.calculate-area {
+  background-color: #f8f8f8;
+  height: 815px;
+}
