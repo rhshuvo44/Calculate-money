@@ -43,12 +43,19 @@ document.getElementById('save-btn').addEventListener('click',function(){
    const save = getInputValue('save');
    const income = getInputValue('income');
     const balance= getTextValue('total-balance').innerText;
-
+        
    const saving = income *(save/100);
    const remainingAmount =balance-saving;
+    
+    if (saving > balance) {
+    getTextValue('erro2').style.display='block';
+
+}else{
+    getTextValue('erro2').style.display='none';
+
    getTextValue('saving-amount').innerText=saving;
    getTextValue('remaining-amount').innerText=remainingAmount;
 
-   
+}
 
 })

@@ -49,7 +49,7 @@
                   <h3>Expenses</h3>
                   <div class="row mb-3">
                     <label for="food" class="col-md-3 col-form-label"
-                      >Food</label
+                      >Food:</label
                     >
                     <div class="col-md-6">
                       <input placeholder="Food Cost" type="text" class="form-control" id="food" />
@@ -57,7 +57,7 @@
                   </div>
                   <div class="row mb-3">
                     <label for="rent" class="col-md-3 col-form-label"
-                      >Rent</label
+                      >Rent:</label
                     >
                     <div class="col-md-6">
                       <input placeholder="Rent Cost" type="text" class="form-control" id="rent" />
@@ -65,7 +65,7 @@
                   </div>
                   <div class="row mb-3">
                     <label for="clothes" class="col-md-3 col-form-label"
-                      >Clothes</label
+                      >Clothes:</label
                     >
                     <div class="col-md-6">
                       <input placeholder="Clothes Cost" type="text" class="form-control" id="clothes" />
@@ -74,49 +74,33 @@
                   <button id="calculate" class="btn btn-primary">
                     Calculate
                   </button>
-                  <p id="erro" class="bg-danger p-3 mt-2 text-white">Please number</p>
+                  <!-- erro  -->
+                  <p id="erro" class="bg-danger p-3 mt-2 text-white"> Input field cann't be empty and become a number</p>
                   <div class="py-5">
                     <h3>Total Expenses: <span id="total-expensen">00</span></h3>
                     <h3>Balance: <span id="total-balance">00</span></h3>
-                  <p id="erro1" class="bg-danger p-3 mt-2 text-white">Your Expenses gather then your Balance</p>
+                    <!-- erro1  -->
+                  <p id="erro1" class="bg-danger p-3 mt-2 text-white">You did cost more than your main balance</p>
 
                   </div>
                 </div>
               </div>
               <!-- saving  -->
-              <div class="d-flex justify-content-center">
                 <div class="input-group mb-3">
-                  
-                  <label for="save" class="col-md-3 col-form-label"
-                  >Save</label
-                >
-                <div class="col-md-6">
-                  <input placeholder="" type="text" class="form-control" id="save" />
-                </div>
+                  <label for="save" class="col-sm-2 col-form-label">save:</label>
+                  <input type="text" class="form-control" id="save" placeholder="Saving persantage">
                   <span class="input-group-text">%</span>
+                  <button id="save-btn" type="button" class="btn btn-primary d-block mx-auto">
+                    Save
+                  </button>
                 </div>
-                <!-- <div>
-                  <div class="row mb-3">
-                    <label for="save" class="col-md-2 col-form-label"
-                      >Save</label
-                    >
-                    <div class="col-md-2">
-                      <input type="text" class="form-control" id="save" />
-                    </div> -->
-                    <div class="col-md-4">
-                
-                      <button id="save-btn" class="btn btn-primary">
-                        Save
-                      </button>
-                      <!-- <span>%</span> -->
-                    </div>
-                  </div>
                   <div class="py-5">
                     <h3>Saving Amount: <span id="saving-amount">00</span></h3>
                     <h3>
                       Remaining Balance: <span id="remaining-amount">00</span>
                     </h3>
-                  <p id="erro2" class="bg-danger p-3 mt-2 text-white">Please number</p>
+                    <!-- erro2  -->
+                  <p id="erro2" class="bg-danger p-3 mt-2 text-white">You do not have enough balance for savings</p>
 
                   </div>
                 </div>
